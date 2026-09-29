@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PRAPETS · Centro Integrado de Saúde Animal</title>
+<meta name="description" content="PRAPETS - Centro Integrado de Saúde Animal. Conheça nossa equipe de médicos veterinários e agende sua consulta." />
+
+<link rel="icon" type="image/png" href="img/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ====================== HEADER ====================== -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="#topo" class="logo">
+      <img src="img/logo-mark.png" alt="" class="logo-mark" />
+      <span class="logo-text">PRA<span>PETS</span></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+      <a href="#" id="prapetsInsta" target="_blank" rel="noopener" class="nav-insta" aria-label="Instagram do PRAPETS">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+        <span class="nav-insta-label">Instagram</span>
+      </a>
+      <a href="#contato" class="nav-cta">Agendar consulta</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ====================== HERO ====================== -->
+<section class="hero" id="topo">
+  <div class="hero-paws" id="heroPaws" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Centro Integrado de Saúde Animal</p>
+      <h1>Cuidado completo para quem<br> mais te dá alegria.</h1>
+      <p class="hero-desc">
+        <!-- EDITAR: descrição curta do PRAPETS -->
+        A PRAPETS reúne, em um só lugar, especialistas veterinários dedicados
+        à saúde e ao bem-estar do seu animal. Do check-up de rotina aos
+        cuidados mais especializados 
+      </p>
+
+      <div class="hero-actions">
+        <a href="#equipe" class="btn btn-primary">Conhecer a equipe</a>
+        <a href="#contato" class="btn btn-ghost">Ver endereço</a>
+      </div>
+
+      <div class="hero-address">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 22s7-7.58 7-13A7 7 0 1 0 5 9c0 5.42 7 13 7 13Z" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <span>Rua Frei Henrique Ascoli, 514 – Capuchinhos, Feira de Santana – BA, 44076-250</span>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-blob"></div>
+      <div class="art-ring"></div>
+      <div class="art-mark-wrap">
+        <img src="img/logo-mark.png" class="art-mark" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== SOBRE ====================== -->
+<section class="sobre" id="sobre">
+  <div class="container sobre-inner">
+    <div class="sobre-num reveal">
+      <span>+<span class="counter" data-target="5">0</span></span>
+      <p>especialidades sob o mesmo teto</p>
+    </div>
+    <div class="sobre-text reveal">
+      <h2>Um centro pensado para simplificar o cuidado do seu pet.</h2>
+      <!-- EDITAR: texto institucional do PRAPETS -->
+      <p>
+        Reunimos profissionais de diferentes especialidades da medicina
+        veterinária para que você não precise correr entre clínicas
+        diferentes. Cada consulta é feita com atenção, tempo e cuidado.
+        Porque saúde animal também é sobre confiança!
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== EQUIPE ====================== -->
+<section class="equipe" id="equipe">
+  <div class="container">
+    <p class="eyebrow center">Nossa equipe</p>
+    <h2 class="section-title center">Profissionais PRAPETS</h2>
+    <p class="section-sub center">
+      Toque em "Agendar no WhatsApp" para falar diretamente com o
+      especialista e marcar sua consulta ou pedir um orçamento.
+    </p>
+
+    <div class="team-grid" id="teamGrid">
+      <!-- Os cards são gerados pelo script.js a partir do array PROFESSIONALS -->
+    </div>
+  </div>
+</section>
+
+<!-- ====================== BANHO & TOSA / FARMÁCIA ====================== -->
+<section class="servicos" id="servicos">
+  <div class="container">
+    <p class="eyebrow center">Também no PRAPETS</p>
+    <h2 class="section-title center">Muito mais que consultas</h2>
+    <p class="section-sub center">
+      Dois parceiros dedicados que completam o cuidado do seu pet, no
+      mesmo endereço do centro integrado.
+    </p>
+  </div>
+
+  <div class="servico">
+    <div class="container servico-inner">
+      <div class="servico-art reveal reveal--scale">
+        <img src="img/unicpet-mark.png" alt="UnicPet — Centro de Estética Animal" />
+        <span class="servico-avatar">
+          <img id="banhoTosaAvatar" src="" alt="" loading="lazy" />
+        </span>
+      </div>
+      <div class="servico-text reveal">
+        <p class="eyebrow">Banho &amp; Tosa</p>
+        <h3>UnicPet — Centro de Estética Animal</h3>
+        <p class="servico-credito">Ellen Amorim · Groomer</p>
+        <p>
+          Centro de estética animal dedicado ao cuidado, bem-estar e conforto dos pets.
+        Sob a responsabilidade da groomer Ellen Amorim, o petshop oferece um atendimento cuidadoso, atencioso e individualizado, respeitando as necessidades e particularidades de cada animal.
+        Com atenção aos detalhes e atendimento cuidadoso, oferece serviços de estética que valorizam não apenas a aparência, mas também uma experiência tranquila e acolhedora para cada animal.
+        </p>
+        <div class="servico-actions">
+          <a href="#" id="banhoTosaWhats" target="_blank" rel="noopener" class="btn btn-primary">
+            Agendar banho e tosa
+          </a>
+          <a href="#" id="banhoTosaInsta" target="_blank" rel="noopener" class="btn-icon" aria-label="Instagram da UnicPet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="servico servico--alt">
+    <div class="container servico-inner servico-inner--reverse">
+      <div class="servico-text reveal">
+        <p class="eyebrow">Farmácia</p>
+        <h3>PraPets Farm - Farmácia veterinária</h3>
+        <p class="servico-credito">Liane Barbosa · Médica Veterinária </p>
+        <p>
+          A PraPets Farm é uma farmácia veterinária dedicada a oferecer praticidade e conveniência aos tutores, integrada a todas especialidades da clínica.
+          Sob a responsabilidade da Dra. Liane Barbosa, médica veterinária, fisiatra e ozonioterapeuta, a farmácia conta com um atendimento cuidadoso e especializado, oferecendo orientação e atenção às necessidades de cada pet.
+          Tudo o que seu pet precisa em um só lugar!
+        </p>
+        <div class="servico-actions">
+          <a href="#" id="farmaciaWhats" target="_blank" rel="noopener" class="btn btn-primary">
+            Falar com a farmácia
+          </a>
+          <a href="#" id="farmaciaInsta" target="_blank" rel="noopener" class="btn-icon" aria-label="Instagram da PraPets Farm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="servico-art reveal reveal--scale">
+        <img src="img/farm-mark.png" alt="PRAPETS Farm" />
+        <span class="servico-avatar">
+          <img id="farmaciaAvatar" src="" alt="" loading="lazy" />
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PARCEIROS ====================== -->
+<section class="parceiros" id="parceiros">
+  <div class="container">
+    <p class="eyebrow center">Quem colabora com a gente</p>
+    <h2 class="section-title center">Nossos parceiros</h2>
+  </div>
+
+  <div class="parceiros-track-wrap reveal">
+    <div class="parceiros-track" id="parceirosTrack">
+      <!-- gerado pelo script.js a partir do array PARTNERS -->
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CONTATO ====================== -->
+<section class="contato" id="contato">
+  <div class="container contato-inner">
+    <div class="contato-info reveal">
+      <p class="eyebrow">Venha nos visitar</p>
+      <h2>Estamos esperando por vocês dois.</h2>
+
+      <ul class="contato-list">
+        <li>
+          <strong>Endereço</strong>
+          <span>Rua Frei Henrique Ascoli, 514 – Capuchinhos, Feira de Santana – BA, 44076-250</span>
+        </li>
+        <li>
+          <strong>Horário de atendimento</strong>
+          <!-- EDITAR: horário -->
+          <span>Segunda a sexta - 8h às 18h<br></span>
+          <span>Sábado - 8h às 12h</span>
+        </li>
+      </ul>
+
+      <p class="contato-note">
+        Cada profissional, a farmácia e o banho &amp; tosa têm um contato
+        direto no WhatsApp — é só tocar no botão de quem você quer falar.
+      </p>
+
+      <a href="#" id="mapLink" target="_blank" rel="noopener" class="btn btn-primary">Ver no mapa</a>
+    </div>
+
+    <div class="contato-map reveal reveal--scale">
+      <iframe
+        title="Localização do PRAPETS"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2510.6077679934547!2d-38.94348840908049!3d-12.2606227548204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x714374e930768e5%3A0xa833ecf941cc41d2!2sFisioprapets%20-%20Centro%20de%20Reabilita%C3%A7%C3%A3o%20Veterin%C3%A1ria!5e0!3m2!1spt-BR!2sbr!4v1788462264301!5m2!1spt-BR!2sbr"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#topo" class="logo">
+      <img src="img/logo-mark.png" alt="" class="logo-mark" />
+      <span class="logo-text">PRA<span>PETS</span></span>
+    </a>
+    <p>&copy; <span id="year"></span> PRAPETS — Centro Integrado de Saúde Animal.</p>
+  </div>
+
+  <div class="container">
+    <p class="credito">
+      Desenvolvido por Gabriel Cardim
+      <a href="https://github.com/cardim1" target="_blank" rel="noopener" aria-label="GitHub de Gabriel Cardim">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01
+          1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+          0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27
+          2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82
+          1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01
+          2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+        </svg>
+        github.com/cardim1
+      </a>
+    </p>
+  </div>
+</footer>
+
+<div class="partner-tooltip" id="partnerTooltip"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
