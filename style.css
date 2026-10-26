@@ -1,7 +1,3 @@
-/* ==========================================================
-  PRAPETS — Centro Integrado de Saúde Animal
-  Paleta: laranja / branco / cinza
-   ========================================================== */
 
 :root{
   --orange: #F25400;
@@ -75,7 +71,6 @@ ul{ list-style: none; margin:0; padding:0; }
 .section-title{ font-size: clamp(1.7rem, 3vw, 2.4rem); }
 .section-sub{ max-width: 560px; margin: 0 auto 3rem; }
 
-/* ---------- Reveal genérico ao rolar a página ---------- */
 .reveal{
   opacity: 0;
   transform: translateY(24px);
@@ -85,7 +80,6 @@ ul{ list-style: none; margin:0; padding:0; }
 .reveal--scale{ transform: translateY(16px) scale(.92); }
 .reveal--scale.is-visible{ transform: translateY(0) scale(1); }
 
-/* ---------- Botões ---------- */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -110,9 +104,6 @@ ul{ list-style: none; margin:0; padding:0; }
 }
 .btn-ghost:hover{ border-color: var(--orange); color: var(--orange); }
 
-/* ============================================================
-  HEADER
-   ============================================================ */
 .site-header{
   position: fixed;
   top:0; left:0; right:0;
@@ -193,9 +184,6 @@ ul{ list-style: none; margin:0; padding:0; }
   transition: transform .3s var(--ease), opacity .3s var(--ease);
 }
 
-/* ============================================================
-   HERO
-   ============================================================ */
 .hero{
   position: relative;
   padding: 168px 0 96px;
@@ -224,7 +212,6 @@ ul{ list-style: none; margin:0; padding:0; }
 }
 .hero-address svg{ color: var(--orange); flex-shrink:0; }
 
-/* --- entrada escalonada do texto do hero, ao carregar a página --- */
 .hero-text > *{
   opacity: 0;
   animation: heroIn .7s var(--ease) forwards;
@@ -240,7 +227,6 @@ ul{ list-style: none; margin:0; padding:0; }
   to{ opacity:1; transform: translateY(0); }
 }
 
-/* --- ilustração decorativa --- */
 .hero-art{
   position: relative;
   height: 380px;
@@ -286,7 +272,6 @@ ul{ list-style: none; margin:0; padding:0; }
   50%{ translate: 0 -10px; }
 }
 
-/* pegadas caminhando — um único momento no load */
 .hero-paws{
   position:absolute;
   bottom: 10%;
@@ -312,9 +297,6 @@ ul{ list-style: none; margin:0; padding:0; }
   100%{ opacity:0; }
 }
 
-/* ============================================================
-   SOBRE
-   ============================================================ */
 .sobre{ background: var(--gray-50); padding: 88px 0; }
 .sobre-inner{
   display:grid;
@@ -334,9 +316,6 @@ ul{ list-style: none; margin:0; padding:0; }
 .sobre-text p{ max-width: 560px; }
 .sobre-num { text-align: center; }
 
-/* ============================================================
-   EQUIPE
-   ============================================================ */
 .equipe{ padding: 96px 0; }
 
 .team-grid{
@@ -383,7 +362,7 @@ ul{ list-style: none; margin:0; padding:0; }
   transform: scale(1.06);
   filter: saturate(1.12) brightness(1.02);
 }
-/* anel de destaque que acende ao passar o mouse, no lugar do preto-e-branco */
+
 .team-photo-inner::after{
   content:"";
   position:absolute; inset:0;
@@ -396,8 +375,6 @@ ul{ list-style: none; margin:0; padding:0; }
   box-shadow: inset 0 0 0 4px var(--orange);
 }
 
-/* selinhos dos planos de saúde aceitos, sobre a foto — fora do
-   contêiner que corta a imagem, para o tooltip não ficar cortado */
 .plan-badges{
   position:absolute;
   left: 14px;
@@ -516,9 +493,6 @@ ul{ list-style: none; margin:0; padding:0; }
 }
 .team-insta svg{ width:19px; height:19px; }
 
-/* ============================================================
-   CONTATO
-   ============================================================ */
 .contato{ background: var(--gray-50); padding: 96px 0; }
 .contato-inner{
   display:grid;
@@ -549,9 +523,6 @@ ul{ list-style: none; margin:0; padding:0; }
 }
 .contato-map iframe{ width:100%; height:100%; border:0; filter: grayscale(.15); }
 
-/* ============================================================
-   SERVIÇOS (Banho & Tosa / Farmácia)
-   ============================================================ */
 .servicos{ padding: 96px 0 0; }
 .servicos > .container{ margin-bottom: 3.5rem; }
 
@@ -581,7 +552,6 @@ ul{ list-style: none; margin:0; padding:0; }
 }
 .servico-art:hover img{ scale: 1.06; rotate: -3deg; }
 
-/* mini círculo com a foto de quem responde pelo serviço */
 .servico-avatar{
   position:absolute;
   right: 14%;
@@ -632,9 +602,6 @@ ul{ list-style: none; margin:0; padding:0; }
 }
 .btn-icon svg{ width:21px; height:21px; }
 
-/* ============================================================
-   PARCEIROS (carrossel)
-   ============================================================ */
 .parceiros{ padding: 88px 0 96px; }
 
 .parceiros-track-wrap{
@@ -681,8 +648,6 @@ ul{ list-style: none; margin:0; padding:0; }
   display:block;
 }
 
-/* tooltip com o nome do parceiro — posicionado via JS (position: fixed)
-   para nunca ser cortado pelo overflow:hidden do carrossel */
 .partner-tooltip{
   position: fixed;
   top:0; left:0;
@@ -718,9 +683,6 @@ ul{ list-style: none; margin:0; padding:0; }
   .parceiros-track{ gap: 1.7rem; }
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
 .site-footer{ padding: 2.4rem 0; }
 .footer-inner{
   display:flex; align-items:center; justify-content:space-between;
@@ -749,9 +711,6 @@ ul{ list-style: none; margin:0; padding:0; }
 }
 .credito a:hover{ color: var(--orange); }
 
-/* ============================================================
-   RESPONSIVO
-   ============================================================ */
 @media (max-width: 900px){
   .hero-inner{ grid-template-columns: 1fr; }
   .hero-art{ height: 260px; order: -1; }
