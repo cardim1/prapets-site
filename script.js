@@ -7,7 +7,6 @@ const PLACEHOLDER_PHOTO = "data:image/svg+xml;utf8," + encodeURIComponent(`
   <circle cx="260" cy="220" r="34" fill="#E4E3E0"/>
 </svg>`);
 
-/* ---------- Avatar circular exibido enquanto a foto real não é adicionada ---------- */
 const PLACEHOLDER_AVATAR = "data:image/svg+xml;utf8," + encodeURIComponent(`
 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
   <circle cx="60" cy="60" r="60" fill="#F5F5F3"/>
@@ -15,21 +14,15 @@ const PLACEHOLDER_AVATAR = "data:image/svg+xml;utf8," + encodeURIComponent(`
   <circle cx="60" cy="118" r="40" fill="#E4E3E0"/>
 </svg>`);
 
-/* ---------- ENDEREÇO GERAL (usado no botão "Ver no mapa") ---------- */
 const ENDERECO_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Fisioprapets+-+Centro+de+Reabilita%C3%A7%C3%A3o+Veterin%C3%A1ria%2C+Rua+Frei+Henrique+Ascoli%2C+514%2C+Feira+de+Santana+BA";
 
-/* ---------- INSTAGRAM DO ESPAÇO PRAPETS (conta geral do centro) ---------- */
 const PRAPETS_INSTAGRAM = "https://www.instagram.com/prapetsespecialidades/";
 
-/* ---------- PLANOS DE PET ACEITOS (selinhos exibidos sobre a foto) ----------
-   Para adicionar um novo plano no futuro, basta criar uma nova chave aqui
-   (com "nome" e "logo") e usar essa chave no campo "planos" do profissional. */
 const PLANOS = {
   petlove: { nome: "Petlove", logo: "img/plano-petlove.png" },
   plamev: { nome: "Plamev", logo: "img/plano-plamev.png" }
 };
 
-/* ---------- LISTA DE PROFISSIONAIS (EDITAR AQUI) ---------- */
 const PROFESSIONALS = [
   {
     nome: "Dr. Robson Rodrigues",
@@ -114,7 +107,6 @@ const PROFESSIONALS = [
   }
 ];
 
-/* ---------- BANHO & TOSA E FARMÁCIA (EDITAR AQUI) ---------- */
 const SERVICES = {
   banhoTosa: {
     whatsapp: "5575981109850",
@@ -136,11 +128,6 @@ const SERVICES = {
   }
 };
 
-/* ========================================================== */
-
-/* ---------- PARCEIROS (carrossel) — EDITAR AQUI ---------- */
-/* Para adicionar/remover um parceiro, basta incluir ou tirar um
-   bloco { nome, logo } da lista — o carrossel se ajusta sozinho. */
 const PARTNERS = [
   { nome: "Ultravet", logo: "img/parceiro-ultravet.png" },
   { nome: "Essência Vitae", logo: "img/parceiro-essencia-vitae.png" },
@@ -170,13 +157,11 @@ document.addEventListener("DOMContentLoaded", () => {
   setupHeroParallax();
 });
 
-/* ---------- Monta o carrossel de parceiros (loop infinito + tooltip com o nome) ---------- */
 function renderPartners(){
   const track = document.getElementById("parceirosTrack");
   const tooltip = document.getElementById("partnerTooltip");
   if(!track || !PARTNERS.length) return;
 
-  // a lista é duplicada para o loop do carrossel ficar contínuo, sem "emenda"
   const lista = [...PARTNERS, ...PARTNERS];
 
   track.innerHTML = lista.map(p => `
@@ -200,7 +185,6 @@ function renderPartners(){
     });
   });
 
-  // no touch, sem hover: toque mostra o nome por um instante e depois some
   track.querySelectorAll(".partner-item").forEach(item => {
     item.addEventListener("touchstart", () => {
       const rect = item.getBoundingClientRect();
@@ -214,13 +198,11 @@ function renderPartners(){
   });
 }
 
-/* ---------- Monta um link do WhatsApp a partir de número + mensagem ---------- */
 function whatsappLink(numero, mensagem){
   const texto = encodeURIComponent(mensagem || "Olá! Gostaria de agendar uma consulta.");
   return `https://wa.me/${numero}?text=${texto}`;
 }
 
-/* ---------- Renderiza os cards da equipe ---------- */
 function renderTeam(){
   const grid = document.getElementById("teamGrid");
   if(!grid) return;
@@ -271,7 +253,6 @@ const whatsIconSVG = `<svg viewBox="0 0 32 32"><path d="M16.001 3C9.373 3 4 8.37
 
 const instaIconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>`;
 
-/* ---------- Liga os botões da seção Banho&Tosa / Farmácia aos números certos ---------- */
 function renderServiceLinks(){
   const banho = document.getElementById("banhoTosaWhats");
   if(banho) banho.href = whatsappLink(SERVICES.banhoTosa.whatsapp, SERVICES.banhoTosa.mensagem);
@@ -300,7 +281,6 @@ function renderServiceLinks(){
   }
 }
 
-/* ---------- Header muda de estilo ao rolar a página ---------- */
 function setupHeaderScroll(){
   const header = document.getElementById("header");
   if(!header) return;
@@ -311,7 +291,6 @@ function setupHeaderScroll(){
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
-/* ---------- Menu mobile ---------- */
 function setupMobileMenu(){
   const toggle = document.getElementById("menuToggle");
   const nav = document.getElementById("nav");
@@ -332,7 +311,6 @@ function setupMobileMenu(){
   });
 }
 
-/* ---------- Cards da equipe surgem ao entrar na tela ---------- */
 function setupScrollReveal(){
   const cards = document.querySelectorAll(".team-card");
   if(!cards.length) return;
@@ -349,7 +327,6 @@ function setupScrollReveal(){
   cards.forEach(card => observer.observe(card));
 }
 
-/* ---------- Elementos que aparecem suavemente ao entrar na tela ---------- */
 function setupGenericReveal(){
   const items = document.querySelectorAll(".reveal");
   if(!items.length) return;
@@ -366,7 +343,6 @@ function setupGenericReveal(){
   items.forEach(item => observer.observe(item));
 }
 
-/* ---------- A arte do hero acompanha sutilmente o mouse (só em telas com mouse) ---------- */
 function setupHeroParallax(){
   const art = document.querySelector(".hero-art");
   if(!art || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
@@ -389,7 +365,6 @@ function setupHeroParallax(){
   });
 }
 
-/* ---------- Pegadas caminhando na hero (uma vez, ao carregar) ---------- */
 function setupHeroPaws(){
   const wrap = document.getElementById("heroPaws");
   if(!wrap) return;
@@ -406,7 +381,6 @@ function setupHeroPaws(){
   }
 }
 
-/* ---------- Contador animado (seção "Sobre") ---------- */
 function setupCounter(){
   const el = document.querySelector(".counter");
   if(!el) return;
